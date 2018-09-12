@@ -65,7 +65,7 @@ function draw() {
 
 function mousePressed() {
 	const [x, y] = [mouseX, mouseY].map(coord => floor(coord / 100));
-	tiles[x][y].mark(player);
+	if(x in tiles && y in tiles[x]) tiles[x][y].mark(player);
 }
 
 
